@@ -16,23 +16,17 @@ public class Lager{
     public synchronized void apfelmusEntnehmen(int id, int anzahl) throws
             InterruptedException
     {
-        int temp = anzahl;
-        while(apfelmus-anzahl > 0 && anzahl != 0){
+        while(){
             System.out.println("identität" + id + "muss warten. Anz. apfelmus:" + apfelmus);
-            apfelmus = apfelmus - anzahl;
-            anzahl = 0;
 
-            Thread.sleep(1000)
         }
         System.out.println(anzahl + " Apfelmus entnommen von " + id + ", Anz. Apfelmus:" + apfelmus);
         notifyAll();
     }
     public synchronized void aepfelEntnehmen(int anzahl) throws InterruptedException {
-        while(aepfel-anzahl > 0 && anzahl != 0){
+        while(){
             System.out.println("Koch muss warten. Anz. Äpfel:" + aepfel);
-           aepfel = aepfel - anzahl;
-           anzahl = 0;
-            Thread.sleep(1000)
+      
         }
         System.out.println(anzahl + " Äpfel entnommen, Anz. Äpfel:" + aepfel);
         notifyAll();
