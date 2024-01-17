@@ -12,6 +12,7 @@ public class Feldarbeiter extends Thread {
         while (true) {
             try {
                 lager.apfelmusEntnehmen(id, 1);
+                System.out.println("plückt");
 // Arbeiter pflückt Äpfel
                 Thread.sleep(1000);
                 lager.aepfelEinlagern(2);
